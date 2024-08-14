@@ -59,7 +59,7 @@ async function * monitorSpeed(page: puppeteer.Page, options?: Options): AsyncGen
 }
 
 export default async function * api(options?: Options): AsyncGenerator<Result, void, undefined> {
-	const browser = await puppeteer.launch({args: ['--no-sandbox']});
+	const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
 	const page = await browser.newPage();
 	await page.goto('https://fast.com');
 
